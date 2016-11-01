@@ -1,2 +1,2 @@
 # CabecaBot
-Um bot em PHP para o Telegram
+Um bot programado em PHP para o Telegram
