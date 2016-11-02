@@ -11,11 +11,15 @@ function request($funcao, $parametros){
         CURLOPT_SSL_VERIFYHOST => FALSE,
         CURLOPT_RETURNTRANSFER => TRUE
     ));
-    //$fp = fopen('telegram2.txt', 'a');
-    //fwrite($fp, curl_exec($ch).'\n');
-    //fclose($fp);
     curl_exec($ch);
     curl_close($ch);
+}
+
+function isCommand($msg){
+    if($msg[0] == "/")
+        return TRUE;
+    else
+        return FALSE;
 }
 
 ?>
