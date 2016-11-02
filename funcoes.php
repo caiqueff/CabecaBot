@@ -4,7 +4,7 @@ function request($funcao, $parametros){
     global $link;
     $ch = curl_init();
     curl_setopt_array($ch, array(
-        CURLOPT_URL => $link.$funcao,
+        CURLOPT_URL => $link."/".$funcao,
         CURLOPT_POST => TRUE,
         CURLOPT_POSTFIELDS => $parametros,
         CURLOPT_SSL_VERIFYPEER => FALSE,
