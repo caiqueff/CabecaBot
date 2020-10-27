@@ -12,7 +12,7 @@ if((stristr($msg, $nome) || $dados['message']['chat']['type'] == "private") && !
 
     //    Entra no IF se:
     //    (O nome for citado num grupo ou a mensagem vier do chat privado) e (a mensagem não for um comando)
-
+    //Link não funciona mais, não sei se o serviço ainda está disponível
     $resp = file_get_contents('http://www.ed.conpet.gov.br/cgi-bin/bot_gateway.cgi?server=bot.insite.com.br:8085&pure=1&msg='.rawurlencode(str_replace($nome,'Ed',strtolower($msg))));
 
     $params = array(
