@@ -13,12 +13,11 @@ function request($funcao, $parametros){
     ));
     curl_exec($ch);
     curl_close($ch);
+    unset($ch);
 }
 
 function isCommand($msg){
-    if($msg[0] == "/")
-        return TRUE;
-    else
+    if($msg[0] !== "/")
         return FALSE;
 }
 
